@@ -19,7 +19,8 @@ while True:
                 break
             if choice3.count('yellow'):
                 print('Opening the yellow door, light begins to glisten from inside. The room is filled with treasure from floor to ceiling.\n You Win!')
-                break     
+                break
+            print('Before you could do so, the castle senses a disturbance from your very soul. As it has risen from the waters, it now descends back into it. You have lost the treasure...\nGame Over!')     
         if choice2.count('swim'):
             print('As you you traverse the body of water, using every ounce of strength to swim, trout begins to surround and attack you. You drown to death\Game Over!')
             break
