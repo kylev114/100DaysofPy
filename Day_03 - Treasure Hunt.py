@@ -1,4 +1,6 @@
-
+# TITLE: Treasure Hunt Game
+# DESCRIPTION: Text-based adventure game
+# DATE: 31Jan2023
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -37,14 +39,14 @@ while True:
                 print("As you enter the red door, fire begins to exhume the room and you burn to death.\nGame Over")
                 break
             if choice3.count('blue'):
-                print("Creeping into the blue door, you begin to hear growls and screeches from unkjown beasts. They soon maul you to death.\nGame Over")
+                print("Creeping into the blue door, you begin to hear growls and screeches from monstrous beasts. They soon maul you to death.\nGame Over")
                 break
             if choice3.count('yellow'):
-                print('Opening the yellow door, light begins to glisten from inside. The room is filled with treasure from floor to ceiling.\n You Win!')
+                print('Opening the yellow door, light begins to glisten from inside. The room is filled with treasure.\n You Win!')
                 break
             print('Before you could do so, the castle senses a disturbance from your very soul. As it has risen from the waters, it now descends back into it. You have lost the treasure...\nGame Over!')     
         if choice2.count('swim'):
-            print('As you you traverse the body of water, using every ounce of strength to swim, trout begins to surround and attack you. You drown to death\Game Over!')
+            print('As you you traverse the body of water, using every ounce of strength to swim, trout begins to surround and attack you. You drown to death.\Game Over!')
             break
         print("As you do, other treasure hunters hear the commotion. They find and capture you.\nGame Over.")
         break

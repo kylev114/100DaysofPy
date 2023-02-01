@@ -1,3 +1,6 @@
+# TITLE: Rock Paper Scissors Game
+# DESCRIPTION: Player chooses rock, paper, or scissors and competes with computer.
+# DATE: 31JAN2023
 moves = {'rock': '''
     _______
 ---'   ____)
@@ -26,10 +29,13 @@ moves = {'rock': '''
 '''}
 
 import random
-player = input('Choose between: Rock, Paper, or Scissors\n').lower()
+try:
+    player = input('Choose between: Rock, Paper, or Scissors\n').lower()
 
-print(f'You chose {player}! {moves[player]}')
-
+    print(f'You chose {player}! {moves[player]}')
+except:
+    print('You didn\'t choose a move. Try again')
+    exit()
 
 computer = random.choice(list(moves.keys()))
 
