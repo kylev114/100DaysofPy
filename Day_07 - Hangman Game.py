@@ -22,12 +22,12 @@ print('Word:',''.join(blank))
 
 while "_" in blank:
     
-    answerLetter = input('Guess a Letter:\n')
-    if len(answerLetter) == 1: wordBank.append(answerLetter)
+    guess = input('Guess a Letter:\n')
+    if len(guess) == 1: wordBank.append(guess)
     wrongAnswer = True
 
     for i in range(len(randWord)):
-        if answerLetter == randWord[i]:
+        if guess == randWord[i]:
             blank[i] = randWord[i]
             wrongAnswer = False
     

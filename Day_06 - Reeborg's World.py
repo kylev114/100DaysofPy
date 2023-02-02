@@ -15,7 +15,9 @@
 #     else: 
 #         turn_left()
  
+# Reflection:
 # The layout of the maze puts the goal in the top right of 
 # the coordinate plane. To avoid back tracing, the robot needs 
-# to check it its right is clear to escape an infinite loop at (4,2)
+# to check it its right is clear to escape an infinite loop at (4,2).
+# Otherwise it will continue to loop endlessly in the the bottom area. 
     
