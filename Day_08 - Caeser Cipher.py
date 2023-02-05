@@ -33,8 +33,8 @@ else:
 
 
 # Reflection:
-# I ended up creating two for loops for each method as I could not find an efficient solution to 
+# I ended up creating two for loops for each method as I did not find an efficient solution to 
 # coordinate each letter and positional value with the dict. Making two lists and using their indexes 
-# seemed easier
+# seemed easier.
 
 
