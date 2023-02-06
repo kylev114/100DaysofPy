@@ -1,4 +1,4 @@
-# TITLE: Simple Calculator App
+# TITLE: Simple Calculator
 # DESCRIPTION: Calculator app that takes 2 number inputs, and a math operator input to output a result. 
 # Can continue operations with another input and math operator using the previous result.
 # DATE: 06Feb2023
@@ -43,5 +43,5 @@ while True:
             num1= result
             skipNum1 =True
 
-
-
+# Reflection:
+# Can add new math operations or inputs. Has very limited usage but good practice for displaying usage of functions.
