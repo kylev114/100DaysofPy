@@ -21,6 +21,7 @@ def drawCard ():
     card = deck52.pop(random.randint(0,len(deck52)-1))
     if isinstance(card[0], int) == False: value = 10
     else: value = card[0]
+    if card[0] =='Ace': value +=1
     return (value, card[0], card[1])
 
 def showdown():
@@ -63,7 +64,7 @@ while True:
     while True:
         if hand >21:
             if aceCount > 0:
-                hand -= 9
+                hand -= 10
                 aceCount -=1
                 continue
             print(f'Your hand is {hand} with {aceCount} aces\nBust!')
@@ -86,7 +87,7 @@ while True:
             break
         if compHand >21:
             if compAceCount > 0:
-                compHand -= 9
+                compHand -= 10
                 compAceCount -=1
                 continue
             print(f'Computer Busts!')
