@@ -58,7 +58,7 @@ while True:
     compAceCount = 0
     if compCard1[1] == 'Ace': compAceCount = 1
     if compCard2[1] == 'Ace': compAceCount +=1
-    print(f'{compCard1[1]} of {compCard1[2]}\n')
+    print(f'{compCard1[1]} of {compCard1[2]} and another card.\n')
 
     # Player Plays Hand
     while True:
@@ -76,6 +76,7 @@ while True:
             if input('Hit or Stand? h or s\n').lower() == 'h':
                 hitCard = drawCard()
                 hand += hitCard[0]
+                if hitCard[1] == 'Ace': aceCount += 1
                 print(f'You draw {hitCard[1]} of {hitCard[2]}')
                 continue
             else: break 
@@ -92,7 +93,7 @@ while True:
                 continue
             print(f'Computer Busts!')
             break
-        if compHand >=17 and (hand<17 or hand<21): 
+        if compHand == 17 and hand<17: 
             print(f'Computer stands with {compHand}')
             break
         else:
@@ -100,6 +101,7 @@ while True:
             print('Computer draws:')
             hitCard = drawCard()
             compHand += hitCard[0]
+            if hitCard[1] == 'Ace': compAceCount = 1
             print(f'{hitCard[1]} of {hitCard[2]}\n')
             continue
         break 
