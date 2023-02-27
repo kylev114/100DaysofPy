@@ -3,14 +3,9 @@
 # DATE: 02Feb2023
 
 from rescBin import hangmanAscii # retrieve ASCII art from resource bin
+from rescBin import words        # imports list of random animal names
 import random
-words = ('ant baboon badger bat bear beaver camel cat clam cobra cougar '
-         'coyote crow deer dog donkey duck eagle ferret fox frog goat '
-         'goose hawk lion lizard llama mole monkey moose mouse mule newt '
-         'otter owl panda parrot pigeon python rabbit ram rat raven '
-         'rhino salmon seal shark sheep skunk sloth snake spider '
-         'stork swan tiger toad trout turkey turtle weasel whale wolf '
-         'wombat zebra ').split()
+
 
 randWord = list(random.choice(words))
 blank = list('_'*len(randWord))
@@ -18,8 +13,7 @@ wordBank = []
 lives = 0
 
 print('Word:',''.join(blank))
-#print(''.join(randWord)) # answer
-
+answer = ''.join(randWord)
 while "_" in blank:
     
     guess = input('Guess a Letter:\n')
@@ -38,7 +32,8 @@ while "_" in blank:
     print('Word Bank: ',' '.join(wordBank))
 
     if lives == 6:
-        print('You Lose!')
+        print(f'You Lose!\nAnswer: {answer}')
+
         exit()
     
 print('You Win!')
